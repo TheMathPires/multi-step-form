@@ -1,0 +1,18 @@
+<h1>Personal info</h1>
+<p>Please provide yourname, email address, and phone number.</p>
+
+<form [formGroup]="step1From" (ngSubmit)="onSubmit()">
+    <label>
+        Name
+        <input type="text" formControlName="name" placeholder="e.g. Stephen King">
+    </label>
+    <label>
+        Email Address
+        <input type="text" formControlName="email" placeholder="e.g. stephenking@lorem.com">
+    </label>
+    <label>
+        Phone Number
+        <input type="text" formControlName="phone" placeholder="e.g. +1 234 567 890">
+    </label>
+    <button type="submit" [disabled]="step1From.invalid">Next Step</button>
+</form>
